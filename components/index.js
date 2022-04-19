@@ -6,5 +6,16 @@ import SubBanner from "./SubBanner";
 import ServiceArea from "./ServiceArea";
 import DealBanner from "./DealBanner";
 import RecentNews from "./RecentNews";
+import Categories from "./Categories";
 
-export { Layout, Header, Footer, Banner, SubBanner, ServiceArea, DealBanner, RecentNews };
+export {
+	Layout,
+	Header,
+	Footer,
+	Banner,
+	SubBanner,
+	ServiceArea,
+	DealBanner,
+	RecentNews,
+	Categories,
+};

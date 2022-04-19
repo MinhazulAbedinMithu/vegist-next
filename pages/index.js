@@ -1,5 +1,6 @@
 import {
 	Banner,
+	Categories,
 	DealBanner,
 	Layout,
 	RecentNews,
@@ -16,6 +17,7 @@ export default function Home() {
 			<Banner />
 			<SubBanner />
 			<ServiceArea />
+			<Categories />
 			<DealBanner countdownTimeStampDate="04/28/2022 20:15:40" />
 			<RecentNews />
 		</Layout>
