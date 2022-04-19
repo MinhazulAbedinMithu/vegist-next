@@ -19,7 +19,7 @@ const RecentNews = () => {
 	return (
 		<div className="w-full">
 			<div className="container mx-auto relative">
-				<h2 className="absolute text-4xl font-bold tracking-wide top-0 left-0 z-10">
+				<h2 className="absolute text-3xl tracking-wide top-0 left-0 z-10">
 					Recent News
 				</h2>
 				<Swiper

@@ -3,11 +3,11 @@ import "swiper/css/bundle";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 import Image from "next/image";
 
-import CatOne from "../public/images/categoryOne.webp";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { useRef } from "react";
+import ProductCard from "./ProductCard";
 
-const Categories = () => {
+const FeaturedProduct = () => {
 	const prevRef = useRef(null);
 	const nextRef = useRef(null);
 	return (
@@ -15,7 +15,7 @@ const Categories = () => {
 			<div className="container mx-auto relative py-16 mt-10">
 				<div className="flex">
 					<h2 className="absolute text-3xl tracking-wide top-0 left-0 z-10">
-						Shop By Category
+						Featured Products
 					</h2>
 					<div className="flex items-center">
 						<div
@@ -35,7 +35,7 @@ const Categories = () => {
 				<Swiper
 					modules={[Navigation, Pagination, Scrollbar, A11y]}
 					spaceBetween={30}
-					slidesPerView={6}
+					slidesPerView={4}
 					speed={500}
 					loop={true}
 					touchRatio={1.5}
@@ -49,46 +49,24 @@ const Categories = () => {
 					}}
 				>
 					<SwiperSlide>
-						<CategoryItem />
+						<ProductCard />
 					</SwiperSlide>
 					<SwiperSlide>
-						<CategoryItem />
+						<ProductCard />
 					</SwiperSlide>
 					<SwiperSlide>
-						<CategoryItem />
+						<ProductCard />
 					</SwiperSlide>
 					<SwiperSlide>
-						<CategoryItem />
+						<ProductCard />
 					</SwiperSlide>
 					<SwiperSlide>
-						<CategoryItem />
-					</SwiperSlide>
-					<SwiperSlide>
-						<CategoryItem />
+						<ProductCard />
 					</SwiperSlide>
 				</Swiper>
 			</div>
 		</div>
 	);
 };
-const CategoryItem = () => {
-	return (
-		<div className="my-5 hover:shadow-xl cursor-pointer">
-			<div className="max-w-[120px] mx-auto">
-				<Image
-					src={CatOne}
-					alt="Category"
-					layout="responsive"
-					objectFit="contain"
-				/>
-			</div>
-			<div className="flex items-center justify-center flex-col py-3">
-				<h4 className="text-xl text-gray-700 leading-relaxed">
-					Fresh Vegetables
-				</h4>
-				<p className="text-yellow-500 text-lg">22 items</p>
-			</div>
-		</div>
-	);
-};
-export default Categories;
+
+export default FeaturedProduct;
